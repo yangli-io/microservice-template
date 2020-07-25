@@ -1,0 +1,64 @@
+---
+swagger: '2.0'
+info:
+  description: This is a typescript microservice template
+  version: 1.0.0
+  title: Upload CSV
+tags:
+- name: Meta
+  description: health check, etc
+- name: Hello World
+  description: Hello World Route
+schemes:
+- http
+paths:
+  "/meta/health":
+    get:
+      tags:
+      - Meta
+      summary: health-check
+      description: ''
+      operationId: healthCheck
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: successful operation
+  "/hello/{name}":
+    get:
+      tags:
+      - Hello World
+      summary: Simple Echo Program
+      description: will return hello and the name of the person
+      produces:
+      - application/json
+      parameters:
+      - name: name
+        in: path
+        description: name of person
+        required: true
+        type: string
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad Request
+          schema:
+            "$ref": "#/definitions/BadRequest"
+        '500':
+          description: Server Error
+          schema:
+            "$ref": "#/definitions/ServerError"
+definitions:
+  BadRequest:
+    type: object
+    properties:
+      message:
+        type: string
+      body:
+        type: object
+  ServerError:
+    type: object
+    properties:
+      message:
+        type: string
