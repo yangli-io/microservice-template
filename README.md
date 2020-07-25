@@ -2,7 +2,8 @@
 
 - [x] Typescript
 - [x] Dockerized
-- [x] Unit Testing
+- [x] Jest Unit Testing
+- [x] Pre-commit check
 
 ### For Local Server
 

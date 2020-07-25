@@ -1,17 +1,26 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 
 const router = express.Router();
+
+router.use(bodyParser.json());
 
 router.post('/add-items', (req, res) => {
   const arr = req.body;
 
   if (Array.isArray(arr)) {
+    const sum = arr.reduce((total, each) => {
+      return total + each;
+    }, 0)
+
     res.json({
-      body: `hello ${name}`
+      body: {
+        sum,
+      },
     })
   } else {
     res.status(400).json({
-      message: 'value should be array'
+      message: 'request body should be array'
     })
   }
 })

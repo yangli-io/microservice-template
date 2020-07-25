@@ -6,11 +6,9 @@ const app = express();
 
 app.use(notFound);
 
-describe('not found route', () => {
-  it('should show not found when entering random route', (done) => {
-    request(app)
-      .get('/not-found')
-      .expect('Content-Type', /json/)
-      .expect(404, { message: 'Not Found' }, done);
-  })
+test('should show not found when entering random route', (done) => {
+  request(app)
+    .get('/not-found')
+    .expect('Content-Type', /json/)
+    .expect(404, { message: 'Not Found' }, done);
 })

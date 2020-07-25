@@ -4,8 +4,5 @@ services:
     build: .
     environment:
       PORT: 8888
-      MONGO_SERVER: mongodb_container:27017
-      MONGO_USER: root
-      MONGO_PASSWORD: rootpassword
     ports:
       - 8888:8888

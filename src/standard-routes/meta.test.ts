@@ -6,11 +6,9 @@ const app = express();
 
 app.use(metaRoute);
 
-describe('meta route', () => {
-  it('should get health route', (done) => {
-    request(app)
-      .get('/health')
-      .expect('Content-Type', /json/)
-      .expect(200, { status: 'ok' }, done);
-  })
+test('should get health route', (done) => {
+  request(app)
+    .get('/health')
+    .expect('Content-Type', /json/)
+    .expect(200, { status: 'ok' }, done);
 })

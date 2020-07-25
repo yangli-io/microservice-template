@@ -10,10 +10,8 @@ app.get('/generate-error', () => {
 
 app.use(errorHandler);
 
-describe('error handler route', () => {
-  it('should handle error when random error happens', (done) => {
-    request(app)
-      .get('/generate-error')
-      .expect(500, { message: 'Ooooops!' }, done);
-  })
+test('should handle error when random error happens', (done) => {
+  request(app)
+    .get('/generate-error')
+    .expect(500, { message: 'Ooooops!' }, done);
 })

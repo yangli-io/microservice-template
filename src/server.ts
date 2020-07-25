@@ -5,7 +5,7 @@ import errorHandler from './standard-routes/error-handler';
 import notFound from './standard-routes/not-found';
 import loggerRoute from './standard-routes/logger-route';
 import logger from './utils/logger';
-import helloWorld from './routes/hello-world';
+import helloWorld from './routes/hello';
 
 const app = express();
 
