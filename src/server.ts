@@ -6,6 +6,9 @@ import notFound from './standard-routes/not-found';
 import loggerRoute from './standard-routes/logger-route';
 import logger from './utils/logger';
 import routes from './routes/routes';
+import env from 'dotenv';
+
+env.config();
 
 const app = express();
 
