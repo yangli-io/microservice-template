@@ -5,7 +5,7 @@
 - [x] Jest Unit Testing
 - [x] Pre-commit check
 - [x] YAML swagger file
-- [] Correlation Id
+- [ ] Correlation Id
 
 ### Purpose
 The purpose of this template repository is to have something simple to get you started with. This microservice is written in Express.js and Typescript. A standard dockerfile has been setup to go with this microservice.
