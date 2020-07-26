@@ -19,7 +19,16 @@ Type checking is possibly one of the best improvements to Javascript since its b
 #### Docker
 Docker makes deployments extremely simple. 
 
-### For Local Server
+### Getting started
+
+1. Clone this repo
+2. install packages
+
+```bash
+npm install
+```
+#### Running the Server
+##### For Local Server
 
 ```bash
 npm install
@@ -27,7 +36,7 @@ npm install
 npm run dev
 ```
 
-### For Production Server
+##### For Production Server
 
 ```bash
 npm run build
@@ -35,7 +44,7 @@ npm run build
 npm start
 ```
 
-### For Docker Compose
+##### For Docker Compose
 
 ```bash
 npm install
