@@ -4,14 +4,15 @@
   "description": "A Standard Microservice Template",
   "scripts": {
     "start": "node index",
-    "dev": "node --inspect=5858 -r ts-node/register ./src/server.ts",
-    "dev:watch": "nodemon",
+    "dev-server": "node --inspect=5858 -r ts-node/register ./src/server.ts",
+    "dev": "nodemon",
     "lint": "tslint --project tsconfig.json -c tslint.json 'src/**/*.ts'",
     "test": "jest ",
     "test:watch": "jest --watch",
     "test:cover": "jest --collectCoverage",
     "test:cover:open": "open ./coverage/lcov-report/index.html",
-    "build": "tsc"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

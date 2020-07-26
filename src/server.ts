@@ -5,7 +5,7 @@ import errorHandler from './standard-routes/error-handler';
 import notFound from './standard-routes/not-found';
 import loggerRoute from './standard-routes/logger-route';
 import logger from './utils/logger';
-import helloWorld from './routes/hello';
+import routes from './routes/routes';
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use('/swagger', swagger);
 
 app.use(loggerRoute);
 
-app.use(helloWorld);
+app.use(routes);
 
 app.use(notFound);
 

@@ -8,6 +8,6 @@
     "src",
     "./swagger.yml"
   ],
-  "exec": "npm run dev",
+  "exec": "npm run dev-server",
   "ext": "ts"
 }

@@ -7,8 +7,8 @@ info:
 tags:
 - name: Meta
   description: health check, etc
-- name: Hello World
-  description: Hello World Route
+- name: Hello
+  description: Hello Echo Route
 schemes:
 - http
 paths:
@@ -27,7 +27,7 @@ paths:
   "/hello/{name}":
     get:
       tags:
-      - Hello World
+      - Hello
       summary: Simple Echo Program
       description: will return hello and the name of the person
       produces:
@@ -49,6 +49,34 @@ paths:
           description: Server Error
           schema:
             "$ref": "#/definitions/ServerError"
+  "/add-items":
+    post:
+      tags:
+      - Addition
+      summary: An api to find the sum of all items
+      description: will return hello and the name of the person
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: user
+        description: list of numbers to add
+        example: "[1,2,3]"
+        schema:
+          type: array
+          items:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad Request
+          schema:
+            "$ref": "#/definitions/BadRequest"
+        '500':
+          description: Server Error
+          schema:
+            "$ref": "#/definitions/ServerError"          
 definitions:
   BadRequest:
     type: object
