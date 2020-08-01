@@ -4,6 +4,7 @@ import meta from './standard-routes/meta';
 import errorHandler from './standard-routes/error-handler';
 import notFound from './standard-routes/not-found';
 import loggerRoute from './standard-routes/logger-route';
+import correlationId from './standard-routes/correlation';
 import logger from './utils/logger';
 import routes from './routes/routes';
 import env from 'dotenv';
@@ -15,6 +16,8 @@ const app = express();
 app.use('/meta', meta);
 
 app.use('/swagger', swagger);
+
+app.use(correlationId);
 
 app.use(loggerRoute);
 

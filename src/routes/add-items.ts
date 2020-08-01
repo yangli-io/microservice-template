@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.use(bodyParser.json());
 
-router.post('/add-items', (req, res) => {
+router.post('/add-items', (req: any, res) => {
   const arr = req.body;
 
   if (Array.isArray(arr)) {
