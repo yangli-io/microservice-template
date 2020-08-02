@@ -4,7 +4,8 @@
   "description": "A Standard Microservice Template",
   "scripts": {
     "start": "node index",
-    "dev-server": "node --inspect=5858 -r ts-node/register ./src/server.ts",
+    "inspect-server": "node --inspect=5858 index",
+    "dev-server": "ts-node --files ./src/server.ts",
     "dev": "nodemon",
     "lint": "tslint --project tsconfig.json -c tslint.json 'src/**/*.ts'",
     "test": "jest ",
