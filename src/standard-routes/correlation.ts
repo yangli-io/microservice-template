@@ -15,7 +15,7 @@ router.use((req, res, next) => {
 
   res.setHeader('x-correlation-id', correlationId);
 
-  asyncLocalStorage.run(correlationId, next)
+  asyncLocalStorage.run(correlationId, next, 'route')
 })
 
 export default router;
